@@ -10,18 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="MyPT_R_D" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="619" height="144"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="639" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="MyPT_R_D" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1480" height="639"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="619" height="144"/>
+                <rect key="frame" x="0.0" y="0.0" width="1480" height="639"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-LW-82O">
-                        <rect key="frame" x="10" y="10" width="599" height="124"/>
+                        <rect key="frame" x="10" y="10" width="1460" height="619"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-Zh-t2N">
-                                <rect key="frame" x="567" y="8" width="24" height="24"/>
+                                <rect key="frame" x="1428" y="8" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="5BT-qq-AEi"/>
                                     <constraint firstAttribute="height" constant="24" id="D6X-Hm-1jl"/>
@@ -77,10 +77,16 @@
                                     <constraint firstAttribute="width" constant="147" id="pRW-ka-W19"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5AH-yN-Xyv">
+                                <rect key="frame" x="10" y="58" width="1440" height="551"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5AH-yN-Xyv" secondAttribute="trailing" constant="10" id="2wM-dd-YdY"/>
                             <constraint firstAttribute="trailing" secondItem="tEM-Zh-t2N" secondAttribute="trailing" constant="8" id="5Ue-yr-auN"/>
+                            <constraint firstItem="5AH-yN-Xyv" firstAttribute="leading" secondItem="3Yh-LW-82O" secondAttribute="leading" constant="10" id="Mkw-0s-Vji"/>
                             <constraint firstItem="sOK-eN-doA" firstAttribute="leading" secondItem="dyA-KV-zZN" secondAttribute="trailing" constant="2" id="OJX-kP-ZvN"/>
                             <constraint firstItem="sOK-eN-doA" firstAttribute="top" secondItem="3Yh-LW-82O" secondAttribute="top" constant="32.5" id="S8c-9X-cWV"/>
                             <constraint firstItem="aAL-7d-aq9" firstAttribute="leading" secondItem="JoE-9f-VFO" secondAttribute="trailing" constant="8" id="UsB-yq-Vhv"/>
@@ -88,10 +94,12 @@
                             <constraint firstItem="dyA-KV-zZN" firstAttribute="leading" secondItem="3Yh-LW-82O" secondAttribute="leading" constant="52" id="an1-eQ-FPB"/>
                             <constraint firstItem="B7w-SR-ZAL" firstAttribute="top" secondItem="dyA-KV-zZN" secondAttribute="bottom" constant="1" id="e3j-ZT-vzH"/>
                             <constraint firstItem="B7w-SR-ZAL" firstAttribute="leading" secondItem="3Yh-LW-82O" secondAttribute="leading" constant="52" id="e7j-uZ-iFU"/>
+                            <constraint firstAttribute="bottom" secondItem="5AH-yN-Xyv" secondAttribute="bottom" constant="10" id="eRs-Hm-GWs"/>
                             <constraint firstItem="JoE-9f-VFO" firstAttribute="leading" secondItem="3Yh-LW-82O" secondAttribute="leading" constant="16" id="g6a-3s-wTj"/>
                             <constraint firstItem="tEM-Zh-t2N" firstAttribute="top" secondItem="3Yh-LW-82O" secondAttribute="top" constant="8" id="gig-EX-cV8"/>
                             <constraint firstItem="JoE-9f-VFO" firstAttribute="top" secondItem="3Yh-LW-82O" secondAttribute="top" constant="8" id="mrF-uZ-6gc"/>
                             <constraint firstItem="dyA-KV-zZN" firstAttribute="top" secondItem="aAL-7d-aq9" secondAttribute="bottom" constant="2" id="sj4-2R-IPQ"/>
+                            <constraint firstItem="5AH-yN-Xyv" firstAttribute="top" secondItem="B7w-SR-ZAL" secondAttribute="bottom" constant="10" id="z91-GE-Z8Q"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -106,14 +114,18 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="downArrowBtn" destination="tEM-Zh-t2N" id="9r8-pZ-w4w"/>
+                <outlet property="tableView2" destination="5AH-yN-Xyv" id="jwB-PZ-jGd"/>
             </connections>
-            <point key="canvasLocation" x="249.61832061068702" y="-105.63380281690141"/>
+            <point key="canvasLocation" x="-308" y="100"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Frame" width="16" height="16"/>
         <image name="Frame2" width="8" height="8"/>
         <image name="image" width="28" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

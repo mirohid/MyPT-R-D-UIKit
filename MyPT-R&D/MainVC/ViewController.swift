@@ -31,10 +31,10 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 5
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return expandedCells.contains(indexPath.row) ? 170 : 100  // Increase height when expanded
+            return expandedCells.contains(indexPath.row) ? 250 : 90  // Increase height when expanded
         }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,13 +58,27 @@ extension ViewController: TableViewCellDelegate {
     }
     
         //Present the sheet when the AlternateExercise button is tapped
-        func didTapAlternateExerciseButton() {
-            let sheetVC = SheetVC(nibName: "SheetVC", bundle: nil) // Load from XIB
-            if let sheet = sheetVC.sheetPresentationController {
-                sheet.detents = [.medium(), .large()] // Set sizes
-                sheet.prefersGrabberVisible = true    // Show grabber handle
+//        func didTapAlternateExerciseButton() {
+//            let sheetVC = SheetVC(nibName: "SheetVC", bundle: nil) // Load from XIB
+//            if let sheet = sheetVC.sheetPresentationController {
+//                sheet.detents = [.medium()] // Set sizes
+//                sheet.prefersGrabberVisible = true    // Show grabber handle
+//            }
+//            present(sheetVC, animated: true, completion: nil)
+//        }
+    
+    func didTapAlternateExerciseButton() {
+        let sheetVC = SheetVC(nibName: "SheetVC", bundle: nil) // Load from XIB
+        
+        if let sheet = sheetVC.sheetPresentationController {
+            let customDetent = UISheetPresentationController.Detent.custom { context in
+                return 330 // Set your desired height here
             }
-            present(sheetVC, animated: true, completion: nil)
+            sheet.detents = [customDetent] // Apply custom height
+            sheet.prefersGrabberVisible = true // Show grabber handle
         }
-
+        
+        present(sheetVC, animated: true, completion: nil)
+    }
+    
 }
