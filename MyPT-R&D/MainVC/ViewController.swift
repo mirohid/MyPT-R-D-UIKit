@@ -58,6 +58,7 @@ extension ViewController: TableViewCellDelegate {
     }
     
         //Present the sheet when the AlternateExercise button is tapped
+    
 //        func didTapAlternateExerciseButton() {
 //            let sheetVC = SheetVC(nibName: "SheetVC", bundle: nil) // Load from XIB
 //            if let sheet = sheetVC.sheetPresentationController {
