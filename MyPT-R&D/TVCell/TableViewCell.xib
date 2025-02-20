@@ -116,7 +116,7 @@
                 <outlet property="downArrowBtn" destination="tEM-Zh-t2N" id="9r8-pZ-w4w"/>
                 <outlet property="tableView2" destination="5AH-yN-Xyv" id="jwB-PZ-jGd"/>
             </connections>
-            <point key="canvasLocation" x="397" y="162"/>
+            <point key="canvasLocation" x="351" y="157"/>
         </tableViewCell>
     </objects>
     <resources>

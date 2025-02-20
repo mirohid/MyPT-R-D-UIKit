@@ -73,7 +73,7 @@ extension ViewController: TableViewCellDelegate {
         
         if let sheet = sheetVC.sheetPresentationController {
             let customDetent = UISheetPresentationController.Detent.custom { context in
-                return 330 // Set your desired height here
+                return 350 // Set your desired height here
             }
             sheet.detents = [customDetent] // Apply custom height
             sheet.prefersGrabberVisible = true // Show grabber handle

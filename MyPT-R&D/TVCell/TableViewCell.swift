@@ -24,7 +24,6 @@ class TableViewCell: UITableViewCell {
         tableView2.dataSource = self
         tableView2.delegate = self
         tableView2.register(UINib(nibName: "TVCellInsideCell", bundle: nil), forCellReuseIdentifier: "TVCellInsideCell")
-
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
